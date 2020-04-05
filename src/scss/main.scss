@@ -16,10 +16,28 @@ $fa-font-path: '~font-awesome/fonts';
 }
 @keyframes ttb {
     0% {
-        top: -100%
+        top: -300px
     }
     100% {
         top: 0
+    }
+};
+
+@keyframes ltr {
+    0% {
+        left: -100%
+    }
+    100% {
+        left: 0
+    }
+};
+
+@keyframes display {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 };
 
@@ -29,17 +47,23 @@ $fa-font-path: '~font-awesome/fonts';
     color: white;
     h1 {
         font-weight: 600;
+        top: -300px;
+        position: relative;
         animation-name: heading, ttb;
-        animation-duration: 1s, 1s;
-        animation-delay: 1s, 1s;
+        animation-duration: 700ms, 1.7s;
+        animation-delay: 3s, 700ms;
         animation-iteration-count: infinite, 1;
+        animation-fill-mode: forwards;
     }
     p {
         width: 40%;
         text-align: center;
-        //animation-name: ltr;
-        //animation-duration: 2s;
-        //animation-delay: 1s;
+        position: relative;
+        left: -100%;
+        animation-name: ltr;
+        animation-duration: 2s;
+        animation-delay: 500ms;
+        animation-fill-mode: forwards;
     }
     a {
         display: block;
@@ -51,5 +75,19 @@ $fa-font-path: '~font-awesome/fonts';
         color: white;
         font-weight: 500;
         text-align: center;
+        opacity: 0;
+        animation-name: display;
+        animation-duration: 2300ms;
+        animation-delay: 1500ms;
+        animation-fill-mode: forwards
+    }
+}
+
+// Footer
+footer {
+
+    .container-fluid {
+        margin-top: 0;
+        padding: 5px 0;
     }
 }

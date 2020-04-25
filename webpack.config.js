@@ -116,6 +116,11 @@ module.exports = (env, argv) => {
         inject: 'body',
         filename: 'contact-us',
       }),
+      new HtmlWebPackPlugin({
+        template: 'src/pages/calculator.html',
+        inject: 'body',
+        filename: 'calculator',
+      }),
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',

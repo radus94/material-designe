@@ -20,6 +20,10 @@ let navigationLinks = [
     url: '/contact-us',
     label: 'Contacts',
   },
+  {
+    url: '/calculator',
+    label: 'Calculator',
+  },
 ];
 
 navigationLinks = navigationLinks.map((navigationItem) => {

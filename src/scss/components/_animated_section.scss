@@ -1,0 +1,143 @@
+@keyframes heading {
+  0% {
+    color: white;
+  }
+  100% {
+    color: red;
+  }
+}
+@keyframes ttb {
+  0% {
+    top: -300px
+  }
+  100% {
+    top: 0
+  }
+};
+
+@keyframes ltr {
+  0% {
+    left: -100%
+  }
+  100% {
+    left: 0
+  }
+};
+
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+};
+
+.animation-box {
+  background-color: #b35b47;
+  height: 400px;
+  color: white;
+  h1 {
+    font-weight: 600;
+    top: -300px;
+    position: relative;
+    animation-name: heading, ttb;
+    animation-duration: 700ms, 1.7s;
+    animation-delay: 3s, 700ms;
+    animation-iteration-count: infinite, 1;
+    animation-fill-mode: forwards;
+  }
+  p {
+    width: 40%;
+    text-align: center;
+    position: relative;
+    left: -100%;
+    animation-name: ltr;
+    animation-duration: 2s;
+    animation-delay: 500ms;
+    animation-fill-mode: forwards;
+  }
+  a {
+    display: block;
+    width: 150px;
+    height: 46px;
+    padding-top: 9px;
+    background-color: #682f26;
+    border: 2px solid white;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0;
+    animation-name: display;
+    animation-duration: 2300ms;
+    animation-delay: 1500ms;
+    animation-fill-mode: forwards
+  }
+}
+
+// Footer
+footer {
+
+  .container-fluid {
+    margin-top: 0;
+    padding: 5px 0;
+  }
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}

@@ -19,6 +19,7 @@ module.exports = {
         "vars-on-top": 0,
         "prefer-rest-params": 0,
         "prefer-spread": 0,
-        "no-plusplus": 0
+        "no-plusplus": 0,
+        "no-shadow": "off",
       }
   };

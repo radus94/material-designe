@@ -17,3 +17,6 @@ import './fa';
 
 import './components/header/header';
 import './components/footer/footer';
+
+import './components/calculator/calculator';
+import './components/calculator/calculatorConstants';
